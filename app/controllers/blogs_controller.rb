@@ -56,7 +56,7 @@ class BlogsController < ApplicationController
     @blog.status = 3
     @blog.update(status: 3 )
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'ゴミ箱に入れました' }
+      format.html { redirect_to @blog, notice: 'ゴミ箱に入れました' }
       format.json { head :no_content }
     end
   end

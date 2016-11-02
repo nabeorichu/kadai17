@@ -10,5 +10,8 @@
   <%= @blog.status %>
 </p>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<%= link_to 'ブログを編集する', edit_blog_path(@blog) %> |
+<%= link_to 'ゴミ箱', dropbox_blogs_path %>
+<%= link_to '下書き', draft_blogs_path %>
+<%= link_to '公開したブログ', blogs_path %>
+<%= link_to 'ブログを作る', new_blog_path %>
