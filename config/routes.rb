@@ -9,5 +9,8 @@ Rails.application.routes.draw do
       post 'drop'
       patch 'drop'
     end
+
   end
+  root 'blogs#index'
+
 end
