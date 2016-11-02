@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Blogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.status %></td>
+        <td><%= link_to 'Show', blog %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+        <td><%= link_to 'Drop', drop_blog_path(blog), data: { confirm: 'ゴミ箱入れますか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'dropbox', dropbox_blogs_path %>
+<%= link_to 'draft', draft_blogs_path %>
+<%= link_to 'index', blogs_path %>
+
+
+<%= link_to 'New Blog', new_blog_path %>
